@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPBL WPA</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 42rem; margin: 0 auto; padding: 2.5rem 1.25rem;
+         font-family: system-ui, "Noto Sans TC", sans-serif; line-height: 1.75; }
+  h1 { font-size: 1.6rem; margin-bottom: .25rem; }
+  .sub { opacity: .7; margin-top: 0; }
+  h2 { font-size: 1.1rem; margin-top: 2rem; }
+  ul { padding-left: 1.2rem; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #8883;
+           font-size: .9rem; opacity: .75; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<h1>CPBL WPA</h1>
+<p class="sub">中華職棒賽後勝率貢獻（WPA）自動計算工具</p>
+
+<h2>這是什麼</h2>
+<p>
+  這是一個個人使用的小工具。比賽結束後，它會抓取中華職棒官方網站的文字轉播紀錄，
+  逐個事件計算每位球員對球隊勝率的影響（Win Probability Added），
+  再把結果整理成試算表，存進作者本人的 Google 雲端硬碟。
+</p>
+
+<h2>運作方式</h2>
+<ul>
+  <li>比賽結束後自動抓取該場的文字轉播資料</li>
+  <li>解析成打席與非打席事件序列，並做總分驗證</li>
+  <li>依據歷史資料建立的勝率表，計算每個事件的勝率變化</li>
+  <li>把每位球員的 WPA 輸出成一份 Google 試算表</li>
+</ul>
+
+<h2>關於 Google 帳號存取</h2>
+<p>
+  這個工具需要向 Google 要求授權，才能把計算結果寫進使用者自己的雲端硬碟。
+  它只要求 <code>drive.file</code> 這個權限範圍，意思是
+  <strong>只能存取它自己建立的檔案</strong>，看不到雲端硬碟裡的其他任何內容。
+  詳見<a href="privacy.html">隱私權政策</a>。
+</p>
+
+<footer>
+  這是個人專案，與中華職棒大聯盟無任何隸屬或合作關係。<br>
+  <a href="privacy.html">隱私權政策</a>
+</footer>
+</body>
+</html>
